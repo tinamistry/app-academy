@@ -7,27 +7,20 @@ def coprime?(num_1, num_2)
   if num_1 < 2 && num_2 < 2
     return true
   else
-    count = check_divisors(num_1, num_2)
-    if count == 0
-      return true
-    else
-      return false
-  end
-
+    return has_multiple_divisors?(num_1, num_2)
   end
 end
 
-def check_divisors(num1, num2)
-  count = 0
+def has_multiple_divisors?(num1, num2)
   (2...num1).each do |divisor1|
     if num1 % divisor1 == 0
       if num2 % divisor1 == 0
-        count += 1
+        return true;
 
       end
     end
   end
-  return count
+  return false
 end
 
 

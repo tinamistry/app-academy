@@ -6,11 +6,8 @@ def only_vowels?(str)
 
   vowels = "aeiou"
   str.each_char do |char|
-    if !vowels.include?(char)
-      return false
-    end
+    return vowels.include?(char)
   end
-  return true
 end
 
 

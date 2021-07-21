@@ -5,8 +5,8 @@
 # The method should return false otherwise.
 
 def adult_in_group?(people)
-  people.each do |hash|
-    if hash[:age] >= 18
+  people.each do |person|
+    if person[:age] >= 18
       return true
       end
   end
